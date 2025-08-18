@@ -9,7 +9,8 @@ class SplashController extends GetxController {
   }
 
   void _navigateToNext() async {
-    await Future.delayed(const Duration(seconds: 4));
-    Get.offNamed(AppRoutes.campaignMatchingScreen);
+    await Future.delayed(const Duration(seconds: 4)).then((value) {
+      Get.offNamed(AppRoutes.campaignMatchingScreen);
+    });
   }
 }
