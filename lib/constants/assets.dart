@@ -1,0 +1,13 @@
+const String cameraIcon = "assets/icons/camera.svg";
+const String personIcon = "assets/icons/user.svg";
+const String notesIcon = "assets/icons/note.svg";
+const String messagesIcon = "assets/icons/messages.svg";
+const String faqIcon = "assets/icons/info.svg";
+const String taskListIcon = "assets/icons/task-list.svg";
+const String logoutIcon = "assets/icons/logout.svg";
+const String deleteIcon = "assets/icons/delete_ac.svg";
+const String cateImage1 = "assets/images/image1.png";
+const String cateImage2 = "assets/images/image2.png";
+const String cateImage3 = "assets/images/image3.png";
+const String cateImage4 = "assets/images/image4.png";
+const String cateImage5 = "assets/images/image5.png";
