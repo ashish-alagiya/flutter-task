@@ -49,7 +49,6 @@ class SetPasswordScreen extends StatelessWidget {
                             ),
                             SizedBox(height: height_40),
 
-                            // Current Password Field
                             Text(
                               '기존 비밀번호 *',
                               style: TextStyle(
@@ -118,8 +117,6 @@ class SetPasswordScreen extends StatelessWidget {
                                 );
                               },
                             ),
-
-                            // Add extra space at the bottom for better scrolling experience
                             SizedBox(height: height_100),
                           ],
                         ),
@@ -127,10 +124,9 @@ class SetPasswordScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // Fixed bottom button section
                   Container(
                     padding: EdgeInsets.all(width_20),
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       height: height_50,
                       child: ElevatedButton(

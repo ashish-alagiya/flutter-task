@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_assignment_app/constants/colors.dart';
 import 'package:flutter_assignment_app/constants/dimens.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 
 import '../controller/splash_controller.dart';
@@ -32,7 +33,7 @@ class SplashScreen extends StatelessWidget {
                 style: TextStyle(
                   color: AppColors.whiteColor,
                   fontWeight: FontWeight.bold,
-                  fontSize: font_40,
+                  fontSize: 40.sp,
                 ),
               ),
             ),

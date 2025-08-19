@@ -1,47 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_app/components/animation.dart';
-import 'package:flutter_assignment_app/components/common_textfield.dart';
 import 'package:flutter_assignment_app/components/custom_snack_bar.dart';
 import 'package:flutter_assignment_app/constants/colors.dart';
 import 'package:flutter_assignment_app/constants/dimens.dart';
 import 'package:flutter_assignment_app/constants/text_style.dart';
 import 'package:flutter_assignment_app/constants/validations.dart';
 import 'package:flutter_assignment_app/pages/basic_information/presentation/controller/basic_information_controller.dart';
+import 'package:flutter_assignment_app/pages/basic_information/presentation/views/widgets/textfield.dart';
 import 'package:get/get.dart';
 
 class BasicInformationScreen extends StatelessWidget {
   const BasicInformationScreen({super.key});
-
-  Widget _buildTextField({
-    required String label,
-    required TextEditingController controller,
-    String? hintText,
-    bool isRequired = false,
-    String? Function(String?)? validator,
-    TextInputType? keyboardType,
-    Widget? suffixIcon,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label + (isRequired ? ' *' : ''),
-          style: textStyleHeading().copyWith(
-            fontSize: font_14,
-            fontWeight: FontWeight.w500,
-            color: AppColors.textBlackColor,
-          ),
-        ),
-        SizedBox(height: height_8),
-        CommonTextField(
-          hintText: hintText.toString(),
-          controller: controller,
-          validator: validator,
-          keyboardType: keyboardType,
-        ),
-      ],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +48,7 @@ class BasicInformationScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildTextField(
+                            buildTextField(
                               label: '아이디',
                               controller: controller.idController,
                               hintText: 'asdf123',
@@ -89,7 +58,7 @@ class BasicInformationScreen extends StatelessWidget {
                             ),
                             SizedBox(height: height_24),
 
-                            _buildTextField(
+                            buildTextField(
                               label: '이메일',
                               controller: controller.emailController,
                               hintText: 'asdf123@naver.com',
@@ -149,7 +118,6 @@ class BasicInformationScreen extends StatelessWidget {
                                   margin: EdgeInsets.all(4),
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      // Handle phone verification
                                       ScaffoldMessenger.of(
                                         context,
                                       ).showSnackBar(
@@ -190,7 +158,7 @@ class BasicInformationScreen extends StatelessWidget {
                             ),
                             SizedBox(height: height_24),
 
-                            _buildTextField(
+                            buildTextField(
                               label: '닉네임',
                               controller: controller.nicknameController,
                               hintText: '장발산',
@@ -200,14 +168,14 @@ class BasicInformationScreen extends StatelessWidget {
                             ),
                             SizedBox(height: height_24),
 
-                            _buildTextField(
+                            buildTextField(
                               label: '인스타그램 아이디',
                               controller: controller.instantIdController,
                               hintText: 'ffxdo_sa',
                             ),
                             SizedBox(height: height_24),
 
-                            _buildTextField(
+                            buildTextField(
                               label: '대표 작업 링크',
                               controller: controller.urlController,
                               hintText: 'https://www.naver.com/',
@@ -216,7 +184,7 @@ class BasicInformationScreen extends StatelessWidget {
                             ),
                             SizedBox(height: height_24),
 
-                            _buildTextField(
+                            buildTextField(
                               label: '포트폴리오',
                               controller: controller.portfolioController,
                               hintText: '포트폴리오.pdf',
